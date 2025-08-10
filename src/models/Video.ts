@@ -26,7 +26,6 @@ const VideoSchema: Schema = new Schema({
   },
   thumbnail: {
     type: String,
-    required: true
   },
   videoId: {
     type: String,
@@ -35,7 +34,6 @@ const VideoSchema: Schema = new Schema({
   },
   duration: {
     type: String,
-    required: true
   },
   views: {
     type: String,

@@ -45,12 +45,12 @@ router.post('/login', async (req, res) => {
 
     const admin = await Admin.findOne({ username });
     if (!admin) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Invalid User Name' });
     }
 
     const isMatch = await admin.comparePassword(password);
     if (!isMatch) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Invalid Password' });
     }
 
     const token = jwt.sign(
